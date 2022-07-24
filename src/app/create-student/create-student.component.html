@@ -1,0 +1,40 @@
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table me-1"></i>
+        Add Student Information
+    </div>
+    <div class="card-body container">
+        <div class="row">
+            <div class="col">
+                <div class="form-outline mb-4">
+                    <input type="text" id="name" class="form-control form-control-lg" #name required [(ngModel)]="students.name"/>
+                    <label class="form-label" for="name">Student's Name</label>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="form-outline mb-4">
+                    <input type="email" id="" class="form-control form-control-lg" #email required [(ngModel)]="students.email"/>
+                    <label class="form-label" for="form3Example3cg">Student's Email</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-outline mb-4">
+                    <input type="number" id="cohort" class="form-control form-control-lg" #cohort required [(ngModel)]="students.cohort"/>
+                    <label class="form-label" for="cohort">Cohort</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-outline mb-4">
+                    <input type="tel" id="number" class="form-control form-control-lg" #phoneNumber required [(ngModel)]="students.phoneNumber"/>
+                    <label class="form-label" for="number">Phone Number</label>
+                  </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-end">
+            <button type="button" routerLink="/list" class="btn btn-danger btn-block btn-lg m-1">Cancel</button>
+            <button type="button" (click)="createStudent()" class="btn btn-success btn-block btn-lg m-1">Add Student</button>
+        </div>              
+    </div>
+</div>

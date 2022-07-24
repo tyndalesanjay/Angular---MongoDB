@@ -1,0 +1,26 @@
+.card {
+    width: 75vw;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+table {
+    text-align: center;
+    width: 73vw;
+}
+
+table th {
+    font-size: 1.687vw;
+    padding: 0.3vw 0;
+    border-bottom: 2px solid ;
+}
+
+table td {
+    padding: 0.5vw 0;
+    font-size: 1.174vw;
+}
+
+td a {
+    padding: 0 0.324vw;
+}

@@ -1,0 +1,116 @@
+<div class="card mb-4">
+  <div class="card-header">
+    <i class="fas fa-table me-1"></i>
+    Student Information
+  </div>
+  <div class="card-body container">
+    <p class="alert alert-info">
+      <i class="fa-solid fa-info"></i> You are able to edit student information.
+    </p>
+    <div class="row">
+      <div class="col">
+        Name:
+        <input
+          type="text"
+          [(ngModel)]="student.name"
+          class="form-control form-control-lg"
+        />
+      </div>
+      <div class="col">
+        Email:
+        <input
+          type="email"
+          [(ngModel)]="student.email"
+          class="form-control form-control-lg"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        Cohort:
+        <input
+          type="number"
+          [(ngModel)]="student.cohort"
+          class="form-control form-control-lg"
+        />
+      </div>
+      <div class="col">
+        Phone Number:
+        <input
+          type="tel"
+          [(ngModel)]="student.phoneNumber"
+          class="form-control form-control-lg"
+        />
+      </div>
+    </div>
+  </div>
+  <mat-accordion class="example-headers-align">
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Student Account Information
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="row">
+        <div class="col">
+          Account Number:
+          <input
+            type="number"
+            [(ngModel)]="accounts.account"
+            class="form-control form-control-lg"
+          />
+        </div>
+        <div class="col">
+          Bank Name:
+          <input
+            type="text"
+            [(ngModel)]="accounts.bank"
+            class="form-control form-control-lg"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          Bank Branch:
+          <input
+            type="text"
+            [(ngModel)]="accounts.branch"
+            class="form-control form-control-lg"
+          />
+        </div>
+        <div class="col">
+          Account Type:
+          <input
+            type="text"
+            [(ngModel)]="accounts.accountType"
+            class="form-control form-control-lg"
+          />
+        </div>
+        <div class="col">
+          Account Status:
+          <input
+            type="text"
+            [(ngModel)]="accounts.accountType"
+            class="form-control form-control-lg"
+          />
+        </div>
+      </div>  
+      <mat-action-row>
+        <button  class="btn btn-primary m-2" (click)="createAccount()">Add Information</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+  
+  <div class="d-flex justify-content-end">
+    <button
+      type="button"
+      routerLink="/list"
+      class="btn btn-danger m-1"
+    >
+      Back
+    </button>
+    <a class="btn btn-primary m-2" (click)="updateStudent(details._id)"
+      >Save Information</a
+    >
+  </div>
+</div>
